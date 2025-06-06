@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eCommerce Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen font-sans">
+
+    <!-- Sidebar -->
+    <div class="flex">
+        <aside class="w-64 h-screen bg-white shadow-md hidden md:block">
+            <div class="p-6 text-2xl font-bold text-blue-600">eShop Admin</div>
+            <nav class="mt-6 space-y-2">
+                <a href="#" class="block px-6 py-2 hover:bg-gray-100 text-gray-700 font-medium">Dashboard</a>
+                <a href="#" class="block px-6 py-2 hover:bg-gray-100 text-gray-700 font-medium">Products</a>
+                <a href="#" class="block px-6 py-2 hover:bg-gray-100 text-gray-700 font-medium">Orders</a>
+                <a href="#" class="block px-6 py-2 hover:bg-gray-100 text-gray-700 font-medium">Customers</a>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-1 p-6">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold text-gray-700">Dashboard</h1>
+                <div class="flex items-center space-x-4">
+                    <input type="text" placeholder="Search..."
+                        class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring" />
+                    <img src="https://i.pravatar.cc/39" alt="User" class="rounded-full w-10 h-10" />
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-gray-500 text-sm">Total Orders</h2>
+                    <p class="text-2xl font-semibold text-blue-600">1,245</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-gray-500 text-sm">Revenue</h2>
+                    <p class="text-2xl font-semibold text-green-600">$23,650</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-gray-500 text-sm">Customers</h2>
+                    <p class="text-2xl font-semibold text-yellow-500">589</p>
+                </div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold text-gray-700 mb-4">Recent Orders</h2>
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr class="text-left text-gray-500 border-b">
+                            <th class="pb-2">Order ID</th>
+                            <th class="pb-2">Customer</th>
+                            <th class="pb-2">Amount</th>
+                            <th class="pb-2">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="py-2">#1001</td>
+                            <td>Jane Doe</td>
+                            <td>$120.50</td>
+                            <td><span class="text-green-500 font-medium">Completed</span></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-2">#1002</td>
+                            <td>John Smith</td>
+                            <td>$89.99</td>
+                            <td><span class="text-yellow-500 font-medium">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2">#1003</td>
+                            <td>Emily Stone</td>
+                            <td>$200.00</td>
+                            <td><span class="text-red-500 font-medium">Canceled</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
